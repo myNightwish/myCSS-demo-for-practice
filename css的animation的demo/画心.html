@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .heart {
+        width: 200px;
+        height: 200px;
+        background: #e74c3c;
+        transform: rotate(45deg);/*旋转变正*/
+        position: relative;
+        animation-name: heart;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+
+    .heart::before {   /* 两个圆的1号圆：圆的直径等于正方形的边长*/
+        content: '';
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #e74c3c;
+        position: absolute;
+        transform: translate(-50%, 0px);  /* 在垂直方向居中 */
+    }
+
+    .heart::after {  /* 两个圆的2号圆*/
+        content: '';
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #e74c3c;
+        position: absolute;
+        transform: translate(0%, -50%);
+    }
+
+    @keyframes heart {
+        from {
+            transform: scale(.3) rotate(45deg);
+        }
+
+        to {
+            transform: scale(1) rotate(45deg);/*变大：跳动*/
+        }
+    }
+</style>
+</head>
+<body>
+  <main>
+    <div class="heart"></div>
+  </main>
+</body>
+</html>

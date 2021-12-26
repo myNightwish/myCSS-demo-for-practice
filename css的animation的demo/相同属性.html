@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+        background: #34495e;
+        animation-name: scale, colors, rotate;
+        animation-duration: 1s, 5s, 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes scale {
+        from {
+            width: 0;
+            height: 0;
+        }
+
+        to {
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+    @keyframes colors {
+        0% {
+            background: #e67e22;
+        }
+
+        50% {
+            background: #34495e;
+        }
+
+        100% {
+            background: #16a085;
+        }
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(-360deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+    <main></main>
+</body>
+</html>

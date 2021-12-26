@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h2 {
+            color: #f39c12;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #34495e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            width: 400px;
+            height: 100px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        li span {
+            font-size: 10px;
+            color: #ecf0f1;
+        }
+
+        i.fa {
+            font-size: 30px;
+            margin: 5px;
+            color: #e74c3c;
+            animation-name: hd;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        li:nth-child(1)>i.fa {
+            animation-direction: normal;
+        }
+
+        li:nth-child(2)>i.fa {
+            animation-direction: reverse;
+        }
+
+        li:nth-child(3)>i.fa {
+            animation-direction: alternate;
+        }
+
+        li:nth-child(4)>i.fa {
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes hd {
+            from {}
+
+            to {
+                opacity: 1;
+                transform: scale(3);
+            }
+        }
+    </style>
+</head>
+<body>
+  <ul>
+    <li>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span>normal</span>
+    </li>
+    <li>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span>reverse</span>
+    </li>
+    <li>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span>alternate</span>
+    </li>
+    <li>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span>alternate-reverse</span>
+    </li>
+</ul>
+</body>
+</html>

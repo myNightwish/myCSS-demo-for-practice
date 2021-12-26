@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        width: 400px;
+        height: 400px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    nav::after {
+        content: '向军老师';
+        color: #ecf0f1;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+        text-shadow: 3px 3px 0px #34495e;
+        z-index: 1;
+    }
+
+    nav::before {
+        content: '';
+        width: 200px;
+        height: 200px;
+        background: #e74c3c;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    nav:hover ul {
+        transform: scale(1);
+    }
+
+    ul {
+        width: 300px;
+        height: 300px;
+        transform: scale(0);
+        transition: 2s;  /* 控制显隐过渡时间*/
+    }
+
+    ul li {
+        width: 80px;
+        height: 80px;
+        background: #e74c3c;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        color: white;
+        transition: 5s;  /* 每个元素旋转的过渡时间 */ 
+        transform-origin: 150px 150px;
+        box-shadow: 0 0 15px rgba(0, 0, 0.8);
+    }
+
+    ul li span {
+        transition: 1s;  /* 控制span */
+    }
+
+    nav:hover li:nth-child(1) {
+        transform: rotate(40deg);
+    }
+
+    nav:hover li:nth-child(1)>span {
+        transform: rotate(1040deg);
+    }
+
+    nav:hover li:nth-child(2) {
+        transform: rotate(80deg);
+    }
+
+    /* nav:hover li:nth-child(2)>span {
+        transform: rotate(1000deg);
+    } */
+
+    nav:hover li:nth-child(3) {
+        transform: rotate(120deg);
+    }
+
+    /* nav:hover li:nth-child(3)>span {
+        transform: rotate(960deg);
+    } */
+
+    nav:hover li:nth-child(4) {
+        transform: rotate(160deg);
+    }
+
+    /* nav:hover li:nth-child(4)>span {
+        transform: rotate(720deg);
+    } */
+
+    nav:hover li:nth-child(5) {
+        transform: rotate(200deg);
+    }
+
+    /* nav:hover li:nth-child(5)>span {
+        transform: rotate(880deg);
+    } */
+
+    nav:hover li:nth-child(6) {
+        transform: rotate(240deg);
+    }
+
+    /* nav:hover li:nth-child(6)>span {
+        transform: rotate(1680deg);
+    } */
+
+    nav:hover li:nth-child(7) {
+        transform: rotate(280deg);
+    }
+
+    /* nav:hover li:nth-child(7)>span {
+        transform: rotate(1920deg);
+    } */
+
+    nav:hover li:nth-child(8) {
+        transform: rotate(320deg);
+    }
+
+
+    nav:hover li:nth-child(9) {
+        transform: rotate(360deg);
+    }
+
+    nav:hover li:nth-child(9)>span {
+        transform: rotate(2520deg);
+    }
+</style>
+
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><span><i class="fa fa-address-book" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-adjust" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-bars" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-book" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-bug" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-compress" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-ban" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-beer" aria-hidden="true"></i></span></li>
+        <li><span><i class="fa fa-bus" aria-hidden="true"></i></span></li>
+    </ul>
+</nav>
+</body>
+</html>

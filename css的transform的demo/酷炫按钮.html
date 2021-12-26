@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #34495e;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main .btn {
+        display: block;
+        height: 30px;
+        width: 150px;
+        border: solid 2px #e74c3c;
+        background: none;
+        color: white;
+        position: relative;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+    }
+
+    main .btn::before {
+        transition: all .8s;
+        align-self: center;
+        content: '';
+        position: absolute;
+        width: 0%;  /* 从0过渡到200% */
+        height: 100%;
+        background: #e74c3c;
+        /* 保证背景色，不要把文字遮盖住 */
+        z-index: -1;  
+        transform: skewX(-45deg);
+    }
+
+    main .btn:hover::before {
+        width: 200%; 
+    }
+</style>
+</head>
+<body>
+  <main>
+    <a class="btn">
+        HOUDUNREN
+    </a>
+  </main>
+</body>
+</html>

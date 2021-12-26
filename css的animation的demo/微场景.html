@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header {
+        width: 100vw;
+        height: 10vh;
+        font-size: 2.5em;
+        color: white;
+        background: #e74c3c;
+        text-align: center;
+        line-height: 10vh;
+        animation-name: hd-translate;
+        animation-duration: 500ms;
+    }
+
+    main {
+        flex: 1;
+        width: 100vw;
+        height: 300px;
+        left: 0;
+        bottom: 0;
+        background: url("5.jpg") no-repeat right bottom;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100vw);
+        animation-name: hd-rotate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    main>* {
+        opacity: .8;
+        font-size: 1.2em;
+        line-height: 2em;
+        color: #f3f3f3;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+    }
+
+    main>.lesson {
+        width: 80vw;
+        height: 40vw;
+        background: #8e44ad;
+        transform: translate(-100vw, -100vh);
+        animation-name: hd-rotate;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    main>.video {
+        margin-top: 20px;
+        width: 60vw;
+        height: 40vw;
+        background: #2980b9;
+        animation-name: hd-translate;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        transform: translate(-100vw, -100vh);
+        animation-fill-mode: forwards;
+    }
+
+    footer {
+        width: 100vw;
+        height: 10vh;
+        font-size: 1.5em;
+        color: white;
+        background: #27ae60;
+        text-align: center;
+        line-height: 10vh;
+        animation-name: hd-skew;
+        animation-duration: 500ms;
+        animation-delay: 3s;
+        transform: translateX(-100vw);
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes hd-translate {
+        from {
+            transform: translate(-100vw, -100vh);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes hd-rotate {
+        from {
+            transform: translate(-100%, -100%);
+        }
+
+        to {
+            transform: translateX(0) rotate(360deg);
+        }
+    }
+
+    @keyframes hd-skew {
+        from {
+            transform: translateX(-100%) skew(-45deg);
+        }
+
+        to {
+            transform: skewX(0deg);
+        }
+    }
+</style>
+</head>
+<body>
+  <body>
+    <header>
+        后盾人
+    </header>
+    <main>
+        <div class="lesson">
+            系统课程是多个实战课程的组合，用来全面掌握一门语言或软件的使用，尤其适合刚入门的新手系统牢固的掌握知识。
+        </div>
+        <div class="video hd-translate">
+            系统课程是多个实战课程的组合，用来全面掌握一门语言或软件的使用，尤其适合刚入门的新手系统牢固的掌握知识。
+        </div>
+    </main>
+    <footer>
+        houdunren.com
+    </footer>
+</body>
+</body>
+</html>

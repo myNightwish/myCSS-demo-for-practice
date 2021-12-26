@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #2c3e50;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        body::before {
+            content: 'houdunren.com';
+            color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            opacity: .5;
+        }
+
+        ul {
+            box-sizing: border-box;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        li {
+            box-sizing: border-box;
+            background: #e67e22;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            color: #333333;
+        }
+
+        li:nth-child(1) {
+            animation-timing-function: ease;
+        }
+
+        li:nth-child(2) {
+            animation-timing-function: ease-in;
+        }
+
+        li:nth-child(3) {
+            animation-timing-function: ease-out;
+        }
+
+        li:nth-child(4) {
+            animation-timing-function: ease-in-out;
+        }
+
+        li:nth-child(5) {
+            animation-timing-function: linear;
+        }
+
+        @keyframes move {
+            to {
+                transform: translateY(90vh);
+            }
+        }
+    </style>
+
+</head>
+<body>
+  <ul>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+    <li>linear</li>
+</ul>
+</body>
+</html>

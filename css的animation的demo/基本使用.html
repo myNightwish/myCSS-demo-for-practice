@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        padding: 80px;
+    }
+
+    main {
+        width: 400px;
+        height: 400px;
+    }
+
+    div {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        border: solid 20px #ddd;
+        animation-name: hd;
+        animation-duration: 3s;
+    }
+
+    @keyframes hd {
+        from {
+            opacity: 0;
+            transform: scale(.1);
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+</head>
+<body>
+  <main>
+    <div></div>
+  </main>
+</body>
+</html>

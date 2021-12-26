@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+
+    div {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #e67e22;
+        animation-name: ball;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes ball {
+        0% {}
+
+        100% {
+            transform: translateY(-600px);
+        }
+    }
+
+    section {
+        width: 400px;
+        height: 10px;
+        border-radius: 50%;
+        animation-name: shadow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes shadow {
+        from {
+            background: rgb(0, 0, 0, .9);
+            transform: scale(1);
+        }
+
+        to {
+            background: rgb(0, 0, 0, .1);
+        }
+    }
+</style>
+</head>
+<body>
+  <main>
+    <div></div>
+    <section></section>
+  </main>
+</body>
+</html>

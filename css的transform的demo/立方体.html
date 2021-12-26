@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+
+    body {
+        background: #34495e;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% 50px;
+        transform: translate(-50%, -50%);
+        transition: 2s;
+    }
+
+    main:hover {
+        transform: translate(-50%, -50%) rotate3d(1, 1, 0, 180deg);
+    }
+
+    div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4em;
+    }
+
+    div:nth-child(1) {
+        background: #1abc9c;
+        transform: translateY(-200px) rotateX(-90deg);
+        opacity: .8;
+    }
+
+    div:nth-child(2) {
+        background: #27ae60;
+        transform: translateY(200px) rotateX(90deg);
+        opacity: .8;
+    }
+
+    div:nth-child(3) {
+        background: #e67e22;
+        transform: translateX(-200px) rotateY(90deg);
+        opacity: .8;
+    }
+
+    div:nth-child(4) {
+        background: #8e44ad;
+        transform: translateX(200px) rotateY(-90deg);
+        opacity: .8;
+    }
+
+    div:nth-child(5) {
+        background: #ecf0f1;
+        opacity: .8;
+    }
+
+    div:nth-child(6) {
+        background: #ecf0f1;
+        opacity: .5;
+        transform: translateZ(200px);
+    }
+</style>
+</head>
+<body>
+  <main>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>后盾人</div>
+</main>
+</body>
+</html>

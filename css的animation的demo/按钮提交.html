@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #34495e;
+    }
+
+    button {
+        padding: 10px 50px;
+        outline: none;
+        background: #e67e22;
+        font-size: 2em;
+        border: solid 5px white;
+        color: white;
+    }
+
+    button::after {
+        content: '';
+        display: inline-block;
+        height: 3px;
+        width: 3px;
+        box-shadow: 3px 0 currentColor, 9px 0 currentColor, 15px 0 currentColor;
+        animation-name: point;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        margin-left: 5px;
+    }
+
+    @keyframes point {
+        from {
+            box-shadow: none;
+        }
+
+        30% {
+            box-shadow: 3px 0 currentColor;
+        }
+
+        60% {
+            box-shadow: 3px 0 currentColor, 9px 0 currentColor;
+        }
+
+        90% {
+            box-shadow: 3px 0 currentColor, 9px 0 currentColor, 15px 0 currentColor;
+        }
+    }
+</style>
+</head>
+<body>
+  <button>
+    <i class="fa fa-code" aria-hidden="true"></i>
+    提交
+</button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  main {
+    width: 400px;
+    height: 400px;
+    border: solid 2px white;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #e67e22;
+    animation-name: hd;
+    animation-duration: 3s;
+}
+
+@keyframes hd {
+    0% {}
+
+    25% {
+        transform: translateX(300%);
+    }
+
+    50% {
+        transform: translate(300%, 300%);
+    }
+
+    75% {
+        transform: translate(0, 300%);
+    }
+
+    to {}
+    25%,
+        75% {
+            background: #9b59b6;
+            border-radius: 50%;
+        }
+
+        50%,
+        100% {
+            background: #e67e22;
+        }
+}
+</style>
+
+
+</head>
+<body>
+  <main>
+    <div></div>
+    </main>
+</body>
+</html>

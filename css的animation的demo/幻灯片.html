@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+  <style>
+      * {
+          padding: 0;
+          margin: 0;
+      }
+
+      body {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #2c3e50;
+      }
+
+      main {
+          width: 400px;
+          border: solid 5px #ddd;
+          border-width: 5px 0 5px 0;
+          overflow: hidden;
+          position: relative;
+      }
+
+      main:hover section {
+          animation-play-state: paused;
+      }
+
+      main:hover ul::before {
+          animation-play-state: paused;
+      }
+
+      section {
+          width: 1600px;
+          height: 200px;
+          display: flex;
+          flex-direction: row;
+          animation-name: slide;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-timing-function: steps(4, end);
+      }
+
+      section div {
+          width: 400px;
+          height: 200px;
+          overflow: hidden;
+      }
+
+      section div img {
+          width: 100%;
+      }
+
+      ul {
+          width: 200px;
+          position: absolute;
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 3;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+      ul li {
+          font-size: 2em;
+          font-weight: bold;
+          color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: solid 3px transparent;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          background: rgba(0, 0, 0, .3);
+          box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+      }
+
+      ul::before {
+          content: '';
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          position: absolute;
+          background: #e74c3c;
+          left: 0;
+          animation-name: num;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-timing-function: steps(4, end);
+          z-index: 1;
+      }
+
+      @keyframes slide {
+          from {
+              transform: translateX(0px);
+          }
+
+          to {
+              transform: translateX(-100%);
+          }
+      }
+
+      @keyframes num {
+          100% {
+              transform: translateX(200px);
+          }
+      }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+        <div><img src="1.jpg" alt=""></div>
+        <div><img src="2.jpg" alt=""></div>
+        <div><img src="3.jpg" alt=""></div>
+        <div><img src="5.jpg" alt=""></div>
+    </section>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</main>
+</body>
+</html>

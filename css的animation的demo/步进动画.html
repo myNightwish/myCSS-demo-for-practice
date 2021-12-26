@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        display: grid;
+        /* justify-content: center;
+        align-content: center; */
+    }
+
+    main {
+        justify-self: center;
+        align-self: center;
+        width: 400px;
+        height: 200px;
+        display: grid;
+        grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+    }
+
+    div {
+        background: #f1c40f;
+        text-align: center;
+        position: relative;
+        border-right: solid 1px #2c3e50;
+        border-bottom: solid 1px #2c3e50;
+        box-sizing: border-box;
+    }
+
+    div:nth-child(5)::before {
+        content: 'END';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #e67e22;
+        left: 0;
+        animation-name: move;
+        animation-duration: 5s;
+        z-index: 2;
+        animation-timing-function: steps(4, end);
+        animation-iteration-count: infinite;
+    }
+
+    div:nth-child(1)::after {
+        content: 'START';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #9b59b6;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-timing-function: steps(4, start);
+        animation-iteration-count: infinite;
+        z-index: 2;
+        left: 0;
+        top: 0;
+    }
+
+    @keyframes move {
+        to {
+            transform: translateX(400px);
+        }
+    }
+</style>
+</head>
+<body>
+  <main>
+    <div>1 <small>houdunren.com</small></div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</main>
+</body>
+</html>

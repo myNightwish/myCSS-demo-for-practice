@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #34495e;
+    }
+
+    main {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background: #34495e;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    }
+
+    main::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: scale(1.2);
+        background: radial-gradient(at right, #27ae60, #e67e22, #e74c3c, #e67e22, #27ae60);
+        z-index: -1;
+    }
+
+    main .line>div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10px;
+        height: 95%;
+        background: white;
+    }
+
+    main .line>div:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    main .line>div:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(30deg);
+    }
+
+    main .line>div:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(60deg);
+    }
+
+    main .line>div:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    main .line>div:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(120deg);
+    }
+
+    main .line>div:nth-child(6) {
+        transform: translate(-50%, -50%) rotate(150deg);
+    }
+
+    main>div[class="mark"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+        background: #34495e;
+        border-radius: 50%;
+        transform: scale(.8);
+    }
+
+    main>.point {
+        width: 20px;
+        height: 20px;
+        background: #e74c3c;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    main .hour {
+        width: 15px;
+        position: absolute;
+        height: 25%;
+        background: #95a5a6;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    main .minute {
+        width: 8px;
+        position: absolute;
+        height: 35%;
+        background: #3498db;
+        left: 50%;
+        bottom: 50%;
+        transform-origin: left bottom;
+        transform: translate(-50%, 0) rotate(60deg);
+    }
+
+    main .second {
+        width: 2px;
+        position: absolute;
+        height: 35%;
+        background: #f1c40f;
+        left: 50%;
+        bottom: 50%;
+        transform-origin: left bottom;
+        transform: translate(-50%, 0) rotate(90deg);
+    }
+
+    main:hover .second {
+        transition: 10s;
+        transform: rotate(260deg);
+    }
+
+    main .text {
+        font-size: 1.2em;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        opacity: .5;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+  
+<main>
+  <section class="line">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+  </section>
+  <div class="mark"></div>
+  <div class="point"></div>
+  <div class="hour"></div>
+  <div class="minute"></div>
+  <div class="second"></div>
+  <div class="text">
+      houdunren.com <br>
+      向军大叔
+  </div>
+</main>
+</body>
+</html>

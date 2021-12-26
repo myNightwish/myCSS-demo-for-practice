@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -200px;
+        width: 400px;
+        height: 400px;
+        border: solid 5px silver;
+        transform-style: preserve-3d;
+        transform: perspective(900px) rotateX(60deg) rotateZ(-45deg);
+    }
+
+    div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        width: 200px;
+        height: 200px;
+        transform-origin: left;
+    }
+
+    div:nth-child(1) {
+        background: #2ecc71;
+    }
+
+    div:nth-child(2) {
+        background: #e67e22;
+        transition: 8s;
+    }
+
+    main:hover div:nth-child(2) {
+        transform: rotateY(720deg);
+    }
+
+
+    /* * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -200px;
+        margin-top: -200px;
+        width: 400px;
+        height: 400px;
+        border: solid 5px silver;
+    }
+
+    div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+        width: 200px;
+        height: 200px;
+        transform-origin: 200% 200%;
+    }
+
+    div:nth-child(1) {
+        background: #2ecc71;
+    }
+
+    div:nth-child(2) {
+        background: #e67e22;
+        transition: 1s;
+    }
+
+    main:hover div:nth-child(2) {
+        transform: rotate(-45deg);
+    } */
+</style>
+</head>
+<body>
+  <main>
+    <div></div>
+    <div></div>
+</main>
+</body>
+</html>

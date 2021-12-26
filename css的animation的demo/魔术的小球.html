@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        background: #2c3e50;
+    }
+
+    div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        transform: translate(-20vw, -300%);
+        background: radial-gradient(at right top, #f39c12, #d35400);
+        border-radius: 50%;
+        animation-name: jump;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+    }
+
+    div:nth-child(2) {
+        animation-delay: .2s;
+    }
+
+    div:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    @keyframes jump {
+        0% {
+            transform: translate(-20vw, -300%);
+        }
+
+        10% {
+            transform: scaleY(.9) translate(15vw, 0%);
+        }
+
+        20% {
+            transform: translate(20vw, -200%);
+        }
+
+        30% {
+            transform: scaleY(.9) translate(30vw, 0%);
+        }
+
+        40% {
+            transform: translate(40vw, -120%);
+        }
+
+        50% {
+            transform: scaleY(.9) translate(50vw, 0%);
+        }
+
+        60% {
+            transform: translate(60vw, -70%);
+        }
+
+        70% {
+            transform: scaleY(.9) translate(70vw, 0%);
+        }
+
+        80% {
+            transform: translate(80vw, -50%);
+        }
+
+        90% {
+            transform: scaleY(.9) translate(90vw, 0%);
+        }
+
+        95% {
+            transform: translate(95vw, -30%);
+        }
+
+        100% {
+            transform: scaleY(.9) translate(100vw, 0%);
+        }
+    }
+
+    @keyframes move {
+        0% {
+            /* transform: translateY(-400%); */
+        }
+
+        100% {
+            /* right: 100px; */
+        }
+    }
+</style>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>
