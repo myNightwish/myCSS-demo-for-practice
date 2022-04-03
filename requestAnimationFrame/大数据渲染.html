@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="list"style="width: 500px; height: 500px;background-color: orange;">
+
+  </div>
+  <script>
+    var total = 100000;
+var size = 100;
+var count = total / size;
+var done = 0;
+var ul = document.getElementById('list');
+
+function addItems() {
+    var li = null;
+    var fg = document.createDocumentFragment();
+
+    for (var i = 0; i < size; i++) {
+        li = document.createElement('li');
+        li.innerText = 'item ' + (done * size + i);
+        fg.appendChild(li);
+    }
+
+    ul.appendChild(fg);
+    done++;
+
+    if (done < count) {
+        requestAnimationFrame(addItems);
+    }
+};
+requestAnimationFrame(addItems);
+  </script>
+</body>
+</html>

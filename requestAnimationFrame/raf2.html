@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="test" style="width: 100px; height: 100px;background-color: orange;">
+
+  </div>
+  <script>
+    // 调用的是系统的时间间隔
+    const element = document.getElementById('test');
+    let start;
+
+    function step(timestamp) {
+      if (start === undefined)
+        start = timestamp;
+      const elapsed = timestamp - start;
+
+      //这里使用`Math.min()`确保元素刚好停在200px的位置。
+      element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+
+      if (elapsed < 5000) { // 在两秒后停止动画
+        window.requestAnimationFrame(step);
+      }
+    }
+
+    var timer1 = window.requestAnimationFrame(step);
+
+    //取消回调函数
+    // cancelAnimationFrame(timer1);
+  </script>
+</body>
+</html>
