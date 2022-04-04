@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .inset {
+      clip-path: inset(0);
+      transition: all 2s;
+    }
+    .inset:hover {
+      clip-path: inset(100px 200px 10% 20% round 20px);
+    }
+  </style>
+</head>
+<body>
+  <img class="img inset" 
+    src="http://source.unsplash.com/random/500x500" />
+</body>
+</html>

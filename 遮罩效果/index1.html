@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 注意chrome上默认了body标签的margin为8，所以遮罩定位出现时不是完全吻合着图片 */
+    /* 写好遮罩层样式,并且让它先不显示 */
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 400px;
+      height: 300px;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+    }
+    
+    /* 鼠标hover,显示遮罩 */
+    .cover:hover  {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="width: 400px; height: 300px;">
+    <!-- 图片-->
+    <img object-fit = 'cover' width="400px" height="300px"
+    src="https://cdn.jsdelivr.net/gh/myNightwish/CDN_res/img/a-icehill.avif" alt="" />
+    <!-- 遮罩 -->
+    <div class="cover">
+      遮罩来了
+    </div>
+  </div>
+</body>
+</html>
