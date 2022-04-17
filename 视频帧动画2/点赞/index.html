@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .heart {
+      width: 100px;
+      height: 100px;
+      background: url(https://abs.twimg.com/a/1511233232/img/animations/web_heart_animation_edge.png) 0 0 no-repeat;
+      /* background-position: left; */
+      background-position: 0 0;
+      transition: all steps(28);
+    }
+    .clicked {
+      /* background-position: right; */
+      background-position: -2800px 0;
+
+      transition-duration: .8s;  /* 写在.heart中会使得取消的时候有反向的动画 */
+  }
+  </style>
+</head>
+
+<body>
+  <div id="heart" class="heart"></div>
+</body>
+<script src="./index.js"></script>
+</html>

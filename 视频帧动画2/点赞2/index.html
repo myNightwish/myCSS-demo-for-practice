@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .heart {
+      width: 100px; height: 100px;
+      background: url(https://abs.twimg.com/a/1511233232/img/animations/web_heart_animation_edge.png) 0 0 no-repeat;
+      animation: heart-burst steps(28) 0.8s infinite forwards;
+    }
+    .stop {
+      animation-play-state: paused;
+    }
+    @keyframes heart-burst {
+  0% { background-position: 0%;}
+  100% { background-position: 100%;}  
+}
+    /* @keyframes heart-burst {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -2800px 0;
+      }
+    } */
+  </style>
+</head>
+<body>
+  <div id="heart" class="heart stop"></div>
+  <div>
+    <input type="button" id="btn-stop" value="play">
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
